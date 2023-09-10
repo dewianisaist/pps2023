@@ -4,24 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0FDFF"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvNama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="18dp"
         android:layout_marginStart="18dp"
-        android:text="Nama: Haikal"
+        android:text="@string/nama"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ivImg" />
 
     <TextView
+        android:id="@+id/tvNim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="18dp"
-        android:text="NIM: 123456718"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:text="@string/nim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNama" />
+
+    <TextView
+        android:id="@+id/tvSc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/sc"
+        app:layout_constraintStart_toEndOf="@+id/tvNama"
+        app:layout_constraintTop_toBottomOf="@+id/ivImg" />
+
+    <TextView
+        android:id="@+id/tvSc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/sc"
+        app:layout_constraintStart_toEndOf="@+id/tvNama"
+        app:layout_constraintTop_toBottomOf="@+id/tvSc1" />
+
+    <TextView
+        android:id="@+id/tvNamaValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Haikal"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toEndOf="@+id/tvSc1"
+        app:layout_constraintTop_toBottomOf="@+id/ivImg" />
+
+    <TextView
+        android:id="@+id/tvNimValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21.01.1234"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toEndOf="@+id/tvSc2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNamaValue" />
+
+    <ImageView
+        android:id="@+id/ivImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
